@@ -487,6 +487,7 @@ impl<'a> Painter<'a> {
     }
 
     /// Set background styles to represent diff for minus and plus lines in buffer.
+    #[allow(clippy::type_complexity)]
     fn get_diff_style_sections<'b>(
         minus_lines: &'b [(String, State)],
         plus_lines: &'b [(String, State)],

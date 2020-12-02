@@ -12,6 +12,7 @@ use crate::align;
 /// minus and plus lines. `noop_deletions[i]` is the appropriate deletion operation tag to be used
 /// for `minus_lines[i]`; `noop_deletions` is guaranteed to be the same length as `minus_lines`.
 /// The equivalent statements hold for `plus_insertions` and `plus_lines`.
+#[allow(clippy::type_complexity)]
 pub fn infer_edits<'a, EditOperation>(
     minus_lines: Vec<&'a str>,
     plus_lines: Vec<&'a str>,
